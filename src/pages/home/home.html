@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label stacked>Ingrese texto</ion-label>
+        <ion-input color="primary" clearInput [(ngModel)]="datosBusqueda.texto"></ion-input>
+      </ion-item>
+
+    </ion-col>
+  </ion-row>
+  <button ion-button block (click)="buscarPelicula();" uppercase [disabled]="buscandoPeliculas">Buscar película</button>
+
+</ion-content>
+ 

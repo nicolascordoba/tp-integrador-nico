@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.nicolascba.tpintegrador" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>TP integrador personal</name>
-    <description>TP integrador curso IONIC.</description>
-    <author email="nicolas_cba15@hotmail.com" href="http://ionicframework.com/">Nicolás Córdoba</author>
+<widget id="com.arielretamar.tpintegrador" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>TP Integrador</name>
+    <description>Trabajo práctico integrador.</description>
+    <author email="contacto@arielretamar.com" href="http://arielretamar.com/">Ariel Retamar</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -81,4 +81,7 @@
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="1.1.19" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="2.0.5" />
+    <engine name="android" spec="~7.0.0" />
+    <plugin name="cordova-sqlite-storage" spec="^2.3.1" />
+    <plugin name="cordova-plugin-camera" spec="^4.0.3" />
 </widget>

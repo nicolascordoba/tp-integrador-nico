@@ -1,0 +1,61 @@
+<ion-header>
+
+  <ion-navbar color="green">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    
+      <ion-title>Perfil</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-grid>
+  <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input [(ngModel)]="user.nombre" (ionChange)="modificado()"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>Apellido</ion-label>
+      <ion-input [(ngModel)]="user.apellido" (ionChange)="modificado()"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input [(ngModel)]="user.email" (ionChange)="modificado()"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>Recibir notificaciones</ion-label>
+      <ion-toggle [(ngModel)]="user.notificaciones" (ionChange)="modificado()"></ion-toggle>
+  </ion-item>
+  <ion-item>
+      <ion-label>Fecha de Nacimiento</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY"
+      monthShortNames='ene, feb, mar, abr, may, jun, jul, ago, set, oct, nov, dic' 
+      monthNames='Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Setiembre, Octubre, Noviembre, Diciembre'
+      cancelText="CANCELAR" doneText="OK" [(ngModel)]="user.fecNacimiento" (ionChange)="modificado()"></ion-datetime>
+    </ion-item>
+  <ion-row>
+        <ion-col col-12 text-center>
+          <img [src]="user.fotoPerfil" alt="" *ngIf="user.fotoPerfil">
+          <p *ngIf="!user.fotoPerfil">No hay ninguna foto de perfil cargada</p>
+        </ion-col>
+        <ion-col col-6 text-center>
+          <button ion-button (click)="sacarFoto();">Sacar foto</button>
+        </ion-col>
+        <ion-col col-6 text-center>
+            <button ion-button (click)="abrirGaleria();">Abrir galería</button>
+          </ion-col>
+     </ion-row>
+  <ion-row>
+        <ion-col col-12>
+         <button ion-button block primary-button (click)="guardarCambios();" [disabled]="!modified"> 
+           <ion-icon name="folder"></ion-icon>
+           Guardar
+         </button>
+        </ion-col>
+  </ion-row>
+</ion-grid>
+         
+</ion-content>
